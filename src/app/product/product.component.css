@@ -1,0 +1,38 @@
+.container-flex {
+    display: flex;
+    width: 80%;
+    border: 1px solid rgb(161, 161, 161);
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 40px 0px;
+    align-items: center;
+    height: 400px;
+    margin-top: 100px;
+}
+
+.container-flex img {
+    width: 360px;
+}
+
+.content {
+    width: 400px;
+}
+
+@media (max-width: 965px) {
+    .container-flex img {
+        width: 80%;
+    }
+
+    .content {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .container-flex {
+        padding: 20px;
+        height: 100%;
+    }
+}
+

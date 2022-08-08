@@ -1,0 +1,6 @@
+<div *ngIf="product" class="item">
+    <a [routerLink]="['/list', product.id]"><img [src]="product.img" [title]="title"></a>
+    <a [routerLink]="['/list', product.id]"><h2>{{ product.name }}</h2></a>
+    <p>{{ product.price | currency }}</p>
+    <button (click)="addToCart(product)" mat-raised-button color="accent">Add</button>
+</div>

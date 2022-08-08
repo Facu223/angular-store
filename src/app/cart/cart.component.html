@@ -1,0 +1,7 @@
+<div *ngFor="let item of Cart" class="container">
+  <div *ngIf="item">
+    <h2>{{ item.name }}</h2>
+    <p>{{ item.price }}</p>
+    <button (click)="deleteFromCart(item.id)">Delete</button>
+  </div>
+</div>

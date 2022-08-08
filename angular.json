@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tienda-virtual": {
+    "angular-sandbox": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,16 +13,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tienda-virtual",
+            "outputPath": "dist/angular-sandbox",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -64,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "tienda-virtual:build:production"
+              "browserTarget": "angular-sandbox:build:production"
             },
             "development": {
-              "browserTarget": "tienda-virtual:build:development"
+              "browserTarget": "angular-sandbox:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "tienda-virtual:build"
+            "browserTarget": "angular-sandbox:build"
           }
         },
         "test": {
@@ -85,11 +83,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -97,5 +93,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "86ffc2fd-02d9-464e-92ea-de77239156b2"
   }
 }
