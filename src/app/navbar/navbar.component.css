@@ -8,8 +8,14 @@ nav {
     align-items: center;
     justify-content: space-around;
     height: 70px;
+    z-index: 1000;
 }
 
 nav .logo {
     width: 15%;
 }
+
+nav button {
+    font-size: 25px;
+}
+

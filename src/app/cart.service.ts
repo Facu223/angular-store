@@ -9,14 +9,14 @@ export class CartService {
   cart: Array<product> = [];
 
   addToCart(item: product): void {
-      this.cart.push(item);
-      Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Item added successfully',
-        showConfirmButton: false,
-        timer: 1500
-      })
+    this.cart.push(item);
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Item added successfully',
+      showConfirmButton: false,
+      timer: 2000,
+    });
   }
 
   deleteFromCart(idItem: number): void {
@@ -27,7 +27,24 @@ export class CartService {
       icon: 'error',
       title: 'Item deleted successfully',
       showConfirmButton: false,
-      timer: 1500
-    })
+      timer: 2000,
+    });
   }
+
+  getLength() {
+    return this.cart.length;
+  }
+
+  getTotal() {
+    const total = this.cart.reduce(
+      (acc, currentValue) => acc + currentValue.price,
+      0
+    );
+    return total
+  }
+
+  emptyCart() {
+    this.cart = []
+  }
+
 }

@@ -1,7 +1,33 @@
-<div *ngFor="let item of Cart" class="container">
-  <div *ngIf="item">
-    <h2>{{ item.name }}</h2>
-    <p>{{ item.price }}</p>
-    <button (click)="deleteFromCart(item.id)">Delete</button>
+<div class="container">
+  <div *ngFor="let item of Cart" class="item">
+    <div *ngIf="item">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.price | currency }}</p>
+      <button
+        (click)="deleteFromCart(item.id)"
+        mat-fab
+        color="primary"
+        aria-label="Example icon button with a delete icon"
+      >
+        <i class="bi bi-trash3"></i>
+      </button>
+    </div>
   </div>
+  <div *ngIf="getTotal(); then validTotal; else noValidTotal"></div>
+  <ng-template #validTotal>
+    <div class="total">
+      Total: <b>{{ getTotal() | currency }}</b>
+      <br>
+      <button mat-raised-button color="warn" (click)="emptyCart()">Buy</button>
+    </div>
+  </ng-template>
+  <ng-template #noValidTotal>
+    <div class="total">
+      Cart empty 😞
+      <br />
+      <a [routerLink]="['/list']"
+        ><button mat-raised-button color="warn">¡Check our products!</button></a
+      >
+    </div>
+  </ng-template>
 </div>

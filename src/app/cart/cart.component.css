@@ -1,3 +1,41 @@
 .container {
-    margin-top: 100px;
+  margin-top: 100px;
+}
+
+.container .item {
+  margin: 20px;
+  box-shadow: 0px 0px 5px 1px grey;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  transform-origin: bottom;
+  transition: 0.5s;
+}
+
+.total {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.total button {
+  margin-top: 20px;
+}
+
+@media (max-width: 762px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .total {
+    text-align: center;
+    margin-left: 0;
+  }
 }

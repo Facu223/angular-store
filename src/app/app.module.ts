@@ -21,7 +21,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     ProductDetailComponent,
     MainPageComponent,
     CartComponent,
-    ProductComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
