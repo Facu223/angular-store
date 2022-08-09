@@ -11,15 +11,15 @@ import Swal from 'sweetalert2';
 export class CartComponent {
   constructor(private cart: CartService) {}
   Cart: Array<product> = this.cart.cart;
-  deleteFromCart(idItem: number) {
+  deleteFromCart(idItem: number): void {
     this.cart.deleteFromCart(idItem);
   }
 
-  getTotal() {
+  getTotal(): number {
     return this.cart.getTotal();
   }
 
-  emptyCart() {
+  emptyCart(): void {
     this.cart.emptyCart();
     this.Cart = [];
     Swal.fire({

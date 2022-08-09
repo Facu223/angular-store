@@ -31,11 +31,11 @@ export class CartService {
     });
   }
 
-  getLength() {
+  getLength(): number {
     return this.cart.length;
   }
 
-  getTotal() {
+  getTotal(): number {
     const total = this.cart.reduce(
       (acc, currentValue) => acc + currentValue.price,
       0

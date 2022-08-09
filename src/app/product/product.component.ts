@@ -19,7 +19,7 @@ export class ProductComponent implements OnInit {
     this.product = products.find((product) => product.id === productId);
   }
 
-  addToCart(item: product) {
+  addToCart(item: product): void {
     this.cart.addToCart(item);
   }
 }

@@ -10,7 +10,7 @@ import { CartService } from '../cart.service';
 export class ProductDetailComponent {
   @Input() product!: product;
   constructor(private cart: CartService) {}
-  addToCart(item: product) {
+  addToCart(item: product): void {
     this.cart.addToCart(item);
   }
 
