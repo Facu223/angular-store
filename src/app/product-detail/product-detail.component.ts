@@ -14,6 +14,5 @@ export class ProductDetailComponent {
     this.cart.addToCart(item);
   }
 
-  title: string = "Click for more information"
-
+  title: string = 'Click for more information';
 }

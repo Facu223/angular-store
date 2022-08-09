@@ -12,26 +12,24 @@ export class CartComponent {
   constructor(private cart: CartService) {}
   Cart: Array<product> = this.cart.cart;
   deleteFromCart(idItem: number) {
-    this.cart.deleteFromCart(idItem)
+    this.cart.deleteFromCart(idItem);
   }
 
   getTotal() {
-    return this.cart.getTotal()
+    return this.cart.getTotal();
   }
 
   emptyCart() {
-    this.cart.emptyCart()
-    this.Cart = []
+    this.cart.emptyCart();
+    this.Cart = [];
     Swal.fire({
       title: '¡Thanks for the buy! Shipping product...',
       showClass: {
-        popup: 'animate__animated animate__fadeInDown'
+        popup: 'animate__animated animate__fadeInDown',
       },
       hideClass: {
-        popup: 'animate__animated animate__fadeOutUp'
-      }
-    })
-    
+        popup: 'animate__animated animate__fadeOutUp',
+      },
+    });
   }
-
 }

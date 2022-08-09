@@ -40,11 +40,10 @@ export class CartService {
       (acc, currentValue) => acc + currentValue.price,
       0
     );
-    return total
+    return total;
   }
 
   emptyCart() {
-    this.cart = []
+    this.cart = [];
   }
-
 }
